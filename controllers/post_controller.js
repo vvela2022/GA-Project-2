@@ -15,9 +15,19 @@ router.get("/", (req,res)=> {
     res.send('HELLO WORLD')
 })
 
+//create(New) route
+router.get('/new', (req,res) => {
+    res.send('New Route')
+})
+
 //show route
 router.get("/:id", (req,res)=> {
     res.send('Show Data')
+})
+
+//edit Route
+router.get('/:id/edit', (req, res) => {
+    res.send('Edit route')
 })
 
 module.exports = router
