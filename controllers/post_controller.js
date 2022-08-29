@@ -29,19 +29,20 @@ router.get('/new', (req,res) => {
     res.render('new.ejs')
 })
 
-//Delete Route
-router.delete('/:id', async (req, res, next) => {
-    try{
-        const deletedPost = await db.Post.findByIdAndDelete(req.params.id)
-        console.log(deletedPost)
-        res.redirect('/blog')   
 
-    } catch (error) {
-        req.error = error
-        return next()
-    }
+// //Delete Page
+// router.get('/:id/delete', async (req, res, next) => {
+//     try{
+//         const selectedPost = await db.Post.findById(req.params.id)
+//         const context = {selectedPost}
+//         res.render('delete.ejs',context)
+//     } catch (error) {
+//         req.error = error;
+//         return next();
+//     }
+// })
 
-})
+
 
 //POST route
 router.post('/', async (req, res, next) => {
@@ -80,6 +81,20 @@ router.get('/:id/edit', async (req, res, next) => {
         return next();
     }
    
+})
+
+
+//Delete Route (delete function)
+router.delete('/:id', async (req, res, next) => {
+    try{
+        const deletedPost = await db.Post.findByIdAndDelete(req.params.id)
+        console.log(deletedPost)
+        res.redirect('/blog')   
+
+    } catch (error) {
+        req.error = error
+        return next()
+    }
 })
 
 //edit PUT Route
