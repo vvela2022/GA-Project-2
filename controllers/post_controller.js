@@ -15,4 +15,9 @@ router.get("/", (req,res)=> {
     res.send('HELLO WORLD')
 })
 
+//show route
+router.get("/:id", (req,res)=> {
+    res.send('Show Data')
+})
+
 module.exports = router
