@@ -57,8 +57,15 @@ router.post('/', async (req, res, next) => {
 })
 
 //show route
-router.get("/:id", (req, res)=> {
-    res.send('Show Data')
+router.get("/:id", async (req,res,next)=> {
+    try{
+        const post = await db.Post.findById(req.params.id)
+        const context = {post}
+        res.render('show.ejs', context)
+    }catch (error){
+        req.error = error
+        return next()
+    }
 })
 
 //edit Route
