@@ -21,6 +21,6 @@ app.use('/blog', controllers)
 
 
 //SERVER
-app.listen(4000, () => console.log('starting server at port:', PORT))
+app.listen(PORT, () => console.log('starting server at port:', PORT))
 
 // module.exports = app
