@@ -8,11 +8,16 @@ router.use(express.json())
 router.use(express.urlencoded({extended: false}))
 
 // fetch data from models
-// const db = require('../models')
+require('../models/Post.js')
 
 //index route
 router.get("/", (req,res)=> {
     res.send('HELLO WORLD')
+})
+
+//show route
+router.get("/:id", (req,res)=> {
+    res.send('Show Data')
 })
 
 module.exports = router

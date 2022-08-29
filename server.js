@@ -1,6 +1,8 @@
 // importing express - method-override
 const express = require('express')
 const methodOverride = require('method-override')
+require('./config/db.connection.js')
+
 
 //CONTROLLER IMPORTS
 const controllers = require('./controllers/post_controller')
@@ -13,6 +15,7 @@ app.set('view engine','ejs')
 // Middleware
 app.use(express.static('public'))
 app.use(methodOverride('_method'));
+
 
 app.use('/blog', controllers)
 
