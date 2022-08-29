@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+require('../config/db.connection')
 
 const postSchema = new mongoose.Schema ({
     user: {type: String, required: [true, 'Need a user']},

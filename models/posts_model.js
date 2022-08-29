@@ -1,5 +1,7 @@
-const db = require("mongoose")
-const Post = require("./Post")
+const mongoose = require('mongoose')
+const db = require('./Post.js')
+
+// const Post = require("./Post.js")
 
 const seedData = [
     {
@@ -8,17 +10,16 @@ const seedData = [
         image: 'https://imgur.com/U8Zp43f',
         location: 'Bali, Indonesia'
     },
-    {
-        user: "Victoria Vela",
+    {   user: 'Victoria Vela',
         body: 'That was such an awesome hike!',
         image: 'https://i.imgur.com/gJZu9kY.jpg',
         location: 'Bryce Canyon, Utah'
     }
 ]
-console.log(seedData)
-// db.Post.insertMany(seedData,(err, posts)=>{
+
+// db.insertMany(seedData,(err, posts)=>{
 //     if (err){ console.log(err)}
-//     console.log('added test data',posts)
+//     console.log('added test data',seedData)
 //     mongoose.connection.close()
 // })
 
