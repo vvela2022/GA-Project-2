@@ -16,23 +16,3 @@ const seedData = [
         location: 'Bryce Canyon, Utah'
     }
 ]
-
-// db.insertMany(seedData,(err, posts)=>{
-//     if (err){ console.log(err)}
-//     console.log('added test data',seedData)
-//     mongoose.connection.close()
-// })
-
-// async function reloadData() {
-// 	try {
-// 		// let deleted = await db.Book.deleteMany({});
-// 		// console.log(deleted)
-// 		// console.log(deleted);
-// 		let reloading = await db.Post.insertMany(seedData);
-// 		console.log(reloading)
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// }
-
-// reloadData();
