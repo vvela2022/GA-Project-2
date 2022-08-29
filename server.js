@@ -7,7 +7,7 @@ const controllers = require('./controllers/post_controller')
 
 //app configuration
 const app = express()
-const PORT = 6000
+const PORT = 4000
 app.set('view engine','ejs')
 
 // Middleware
@@ -21,6 +21,6 @@ app.use('/blog', controllers)
 
 
 //SERVER
-app.listen(6000, () => console.log('starting server at port:', PORT))
+app.listen(PORT, () => console.log('starting server at port:', PORT))
 
 // module.exports = app
