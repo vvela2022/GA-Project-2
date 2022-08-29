@@ -8,7 +8,7 @@ router.use(express.json())
 router.use(express.urlencoded({extended: false}))
 
 // fetch data from models
-// const db = require('../models')
+const db = require('../models/Post.js')
 
 //index route
 router.get("/", (req,res)=> {
