@@ -3,7 +3,7 @@ const express = require('express')
 const methodOverride = require('method-override')
 
 //CONTROLLER IMPORTS
-// const controllers = require('./controllers/post_controller')
+const controllers = require('./controllers/post_controller')
 
 //app configuration
 const app = express()
@@ -14,7 +14,7 @@ app.set('view engine','ejs')
 app.use(express.static('public'))
 app.use(methodOverride('_method'));
 
-// app.use('/', controllers)
+app.use('/blog', controllers)
 
 //home route
 // app.get('/')
