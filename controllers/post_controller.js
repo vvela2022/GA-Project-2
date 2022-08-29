@@ -26,7 +26,7 @@ router.get("/", async (req,res,next)=> {
 
 //create(New) route
 router.get('/new', (req,res) => {
-    res.send('New Route')
+    res.render('new.ejs')
 })
 
 //Delete Route
