@@ -28,7 +28,7 @@ router.delete('/:id', async (req, res, next) => {
         const deletedPost = await db.Post.findByIdAndDelete(req.params.id)
         console.log(deletedPost)
         res.redirect('/blog')   
-             
+
     } catch (error) {
         req.error = error
         return next()
@@ -50,13 +50,35 @@ router.post('/', async (req, res, next) => {
 })
 
 //show route
-router.get("/:id", (req,res)=> {
+router.get("/:id", (req, res)=> {
     res.send('Show Data')
 })
 
 //edit Route
-router.get('/:id/edit', (req, res) => {
-    res.send('Edit route')
+router.get('/:id/edit', async (req, res, next) => {
+    // res.send('Edit route')
+    try{
+        const editedPost = await db.Post.findById(req.params.id)
+        res.send('Edit Page')
+    } catch (error) {
+        req.error = error;
+        return next();
+    }
+   
+})
+
+//edit PUT Route
+//try-catch - wait until you have data from database, once you have data from database, 
+router.put('/:id', async (req, res, next) => {
+    try{
+        const submittedPost = req.body
+        console.log(submittedPost)
+        await db.Post.findByIdAndUpdate(req.params.id, submittedPost, {new: true})
+        res.redirect(`/blog/${req.params.id}`)
+    } catch (error) {
+        req.error = error;
+        return next()
+    }
 })
 
 module.exports = router
