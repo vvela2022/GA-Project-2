@@ -73,7 +73,8 @@ router.get('/:id/edit', async (req, res, next) => {
     // res.send('Edit route')
     try{
         const editedPost = await db.Post.findById(req.params.id)
-        res.send('Edit Page')
+        const context = {editedPost}
+        res.render('edit.ejs',context)
     } catch (error) {
         req.error = error;
         return next();

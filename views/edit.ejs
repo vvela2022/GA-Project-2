@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandPost</title>
+</head>
+<body>
+<h2>New Post</h2>
+<%- include('partials/nav.ejs') %>
+<div>
+<form action="/blog/<%=editedPost.id%>?_method=PUT" method="POST">
+    
+    
+    <div>
+        
+        <label for="user">User</label>
+        <input
+         type="text"
+          placeholder="My Username"
+          name="user"
+          id="user"
+          value = "<%=editedPost.user%>"
+          />
+    </div>
+            
+    <div>
+    
+        <label for="body">Body</label>
+        <input 
+         type="text" 
+          placeholder="Body" 
+          name="body" 
+          id="body" 
+          value = "<%=editedPost.body%>"
+          />    
+     </div>
+            
+    <div>
+        
+        <label for="image">Image</label>
+         <input 
+         type="text" 
+         placeholder="http://" 
+         name="image" 
+         id="image" 
+         value = "<%=editedPost.image%>"
+        />
+        
+    </div>
+    
+    <div>
+
+        <label for="location">Location</label>
+      <input
+        class="input"
+        type="text"
+        placeholder="City,State"
+        name="location"
+        id="location"
+        value = "<%=editedPost.location%>"
+          />
+    </div>
+            
+    <button class="button is-info">Submit Edit</button>
+</form>
+</div>
+</body>
+</html>
