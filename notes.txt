@@ -1,0 +1,8 @@
+USER STORY
+
+1.) User arrives at Index Page. All Post Photos are displayed
+2.) User can Add a Post or Comment (link brought to new comment form)
+3.) Click on photo will navigate to individual Post (show page)
+4.) On Show Page, user can view the post text, photo and comments
+5.) User can edit and delete comments from show page
+6.) Navigation bar will bring back to index page and add post 
