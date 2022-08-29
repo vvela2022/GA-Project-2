@@ -13,8 +13,15 @@ router.use(express.urlencoded({extended: false}))
 
 
 //index route
-router.get("/", (req,res)=> {
-    res.send('HELLO WORLD')
+router.get("/", async (req,res,next)=> {
+    try{
+        const posts = await db.Post.find()
+        const context = {posts}
+        res.render('index.ejs', context)
+    }catch (error){
+        req.error = error
+        return next()
+    }
 })
 
 //create(New) route
