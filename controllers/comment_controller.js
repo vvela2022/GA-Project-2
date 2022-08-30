@@ -35,6 +35,7 @@ router.get('/:id/new', async(req,res,next)=>{
             comments: comments
         })
     }catch (error){
+
         req.error = error
         return next()
     }
