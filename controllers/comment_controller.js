@@ -17,14 +17,21 @@ router.get('/', (req,res)=>{
     res.send('These are great comments')
 })
 
-// const seedData2 = [
-//     {   body: 'Sweet picture',
-//         post: '630ce9d9a09e9ac5f4b15b1f'
-//     },
-// ]
 
+//new comment route
+router.get('/new', (req,res)=>{
+    res.send('New Comment Page')
+})
 
-// db.Comment.insertMany(seedData2)
-// console.log(seedData2)
+router.post('/',async (req,res,next)=>{
+    try{
+        const comment = await db.Comment.create(req.body)
+        console.log(comment)
+        res.redirect(`/blog/${comment.post}`)
+    }catch(error){
+        req.err = error
+        console.log(error)
+    }
+})
 
 module.exports = router
