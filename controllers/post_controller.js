@@ -30,17 +30,18 @@ router.get('/new', (req,res) => {
 })
 
 
-// //Delete Page
-// router.get('/:id/delete', async (req, res, next) => {
-//     try{
-//         const selectedPost = await db.Post.findById(req.params.id)
-//         const context = {selectedPost}
-//         res.render('delete.ejs',context)
-//     } catch (error) {
-//         req.error = error;
-//         return next();
-//     }
-// })
+
+//Delete Route (delete function)
+router.get('/:id/remove', async (req, res,) => {
+    try{
+        const post = await db.Post.findById(req.params.id)
+        const context = {post}
+        res.render('delete.ejs', context)
+    }catch (error){
+        req.error = error
+        return next()
+    }
+    })
 
 
 
@@ -61,8 +62,14 @@ router.post('/', async (req, res, next) => {
 router.get("/:id", async (req,res,next)=> {
     try{
         const post = await db.Post.findById(req.params.id)
-        const context = {post}
-        res.render('show.ejs', context)
+        const comments = await db.Comment.find({
+            post: req.params.id
+        });
+        res.render('show.ejs',{
+            post: post,
+            id: post.id,
+            comments: comments
+        })
     }catch (error){
         req.error = error
         return next()
@@ -87,15 +94,16 @@ router.get('/:id/edit', async (req, res, next) => {
 //Delete Route (delete function)
 router.delete('/:id', async (req, res, next) => {
     try{
-        const deletedPost = await db.Post.findByIdAndDelete(req.params.id)
-        console.log(deletedPost)
+        await db.Post.findByIdAndDelete(req.params.id)
         res.redirect('/blog')   
-
     } catch (error) {
         req.error = error
         return next()
     }
 })
+
+
+
 
 //edit PUT Route
 //try-catch - wait until you have data from database, once you have data from database, 
