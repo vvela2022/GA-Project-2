@@ -5,7 +5,8 @@ require('./config/db.connection.js')
 
 
 //CONTROLLER IMPORTS
-const controllers = require('./controllers/post_controller')
+const postController = require('./controllers/post_controller')
+const commentController = require('./controllers/comment_controller')
 
 //app configuration
 const app = express()
@@ -17,7 +18,9 @@ app.use(express.static('public'))
 app.use(methodOverride('_method'));
 
 
-app.use('/blog', controllers)
+app.use('/blog', postController)
+app.use('/comments',commentController)
+
 
 //home route
 // app.get('/')
