@@ -88,8 +88,7 @@ router.get('/:id/edit', async (req, res, next) => {
 //Delete Route (delete function)
 router.delete('/:id', async (req, res, next) => {
     try{
-        const deletedPost = req.body
-        await db.Post.findByIdAndDelete(req.params.id,deletedPost)
+        await db.Post.findByIdAndDelete(req.params.id)
         res.redirect('/blog')   
     } catch (error) {
         req.error = error
