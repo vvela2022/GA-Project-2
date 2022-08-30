@@ -17,6 +17,17 @@
         </div>
         <button><a href="/blog/<%=post.id%>/edit">Edit Post</a></button>
         <button><a href="/blog/<%=post.id%>/remove">Delete Post</a></button>
+
+        
     </div>
+
+    <section>
+        <h2>Comments</h2>
+        <ul>
+          <%comments.forEach ( comment => { %>
+          <li><%= comment.body %></a></li>
+          <% }) %>
+        </ul>
+      </section>
 </body>
 </html>
