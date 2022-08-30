@@ -26,9 +26,16 @@ router.get('/', (req,res)=>{
 router.get('/:id/new', async(req,res,next)=>{
     try{
         const post = await db.Post.findById(req.params.id)
-        const context = {post}
-        res.render('comments/new.ejs')
-    }catch(error){
+        const comments = await db.Comment.find({
+            post: req.params.id
+        });
+        res.render('comments/new.ejs',{
+            post: post,
+            id: post.id,
+            comments: comments
+        })
+    }catch (error){
+
         req.error = error
         return next()
     }
