@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandPost</title>
+</head>
+<body>
+<h2>New Comment</h2>
+<%- include('../partials/nav.ejs') %>
+<div>
+    <form action="/comments" method="POST">
+    
+    <div>
+        
+        <label for="comment-body">User</label>
+        <input
+         type="text"
+          placeholder="Comment here..."
+          name="comment-body"
+          id="comment-body"
+          />
+    </div>
+    <button class="button is-info">Post Comment</button>
+</form>
+</div>
+</body>
+</html>
