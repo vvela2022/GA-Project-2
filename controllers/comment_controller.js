@@ -3,6 +3,10 @@ const router = express.Router()
 
 // fetch data from models
 const db = require('../models')
+const Comment = require('../models/Comment.js')
+const Post = require('../models/Post.js')
+
+
 
 //translate to JSON
 router.use(express.json())
@@ -10,16 +14,6 @@ router.use(express.json())
 //translate incoming data to strings or arrays
 router.use(express.urlencoded({extended: false}))
 
-
-
-//get all comments route (do we need this?)
-router.get('/', (req,res)=>{
-    res.send('These are great comments')
-})
-
-//edit route
-
-//delete route
 
 
 //new comment route
@@ -57,6 +51,7 @@ router.delete('/:id', async (req, res, next) => {
 router.post('/',async (req,res,next)=>{
     try{
         const comment = await db.Comment.create(req.body)
+        user: req.session.currentUser.id
         console.log(comment)
         res.redirect(`/blog`)
     }catch(error){
@@ -64,5 +59,6 @@ router.post('/',async (req,res,next)=>{
         console.log(error)
     }
 })
+
 
 module.exports = router

@@ -7,5 +7,13 @@
     <div class="navLinks">
     <a class="navA" href = "/blog">Home</a> |
     <a class="navA" href = "/blog/new">+</a>
+    <div class="navbar-menu navbar-end">
+        <% if (user) { %>
+            <p class="navbar-item"><%= user.username %></p>
+        <% } %>
+        <!-- routes -->
+        <% if (routes) { %> <% routes.forEach((route) => { %>
+            <a class="navbar-item" href="<%= route.href %>"> <%= route.title %> </a>
+        <% }) %> <% } %>
     </div>
 </nav>
