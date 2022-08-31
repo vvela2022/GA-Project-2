@@ -3,6 +3,9 @@ const router = express.Router()
 
 // fetch data from models
 const db = require('../models')
+const Comment = require('../models/Comment.js')
+
+
 
 //translate to JSON
 router.use(express.json())
@@ -13,9 +16,33 @@ router.use(express.urlencoded({extended: false}))
 
 
 //get all comments route (do we need this?)
-router.get('/', (req,res)=>{
-    res.send('These are great comments')
-})
+router.get("/", (req, res) => {
+    Comment.find({})
+              // here we are adding the user to the populate command so we get both the product and user on a review
+      .populate("post user")
+      .exec((error, allComments) => {
+        if (error) {
+          console.log(error);
+          req.error = error;
+          return next();
+        }
+  
+        Product.find({}, (error, allPosts) => {
+          if (error) {
+            console.log(error);
+            req.error = error;
+            return next();
+          }
+  
+          const context = {
+            reviews: allComments,
+            products: allPosts,
+          };
+  
+          return res.render("comments/index", context);
+        });
+      });
+  });
 
 //edit route
 
@@ -57,6 +84,7 @@ router.delete('/:id', async (req, res, next) => {
 router.post('/',async (req,res,next)=>{
     try{
         const comment = await db.Comment.create(req.body)
+        user: req.session.currentUser.id
         console.log(comment)
         res.redirect(`/blog`)
     }catch(error){
@@ -64,5 +92,24 @@ router.post('/',async (req,res,next)=>{
         console.log(error)
     }
 })
+
+// router.post("/", async(req, res) => {
+//     const review = {
+//       ...req.body,
+      
+//       user: req.session.currentUser.id,
+//     };
+//     const comment =  await db.Comment.findByIdAndDelete(req.params.id) 
+
+//     Comment.create(comment, (error, createdComment) => {
+//       if (error) {
+//         console.log(error);
+//         req.error = error;
+//         return next();
+//       }
+  
+//       return res.redirect("/blog");
+//     });
+//   });
 
 module.exports = router

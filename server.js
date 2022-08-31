@@ -3,12 +3,24 @@ const express = require('express')
 const methodOverride = require('method-override')
 require('./config/db.connection.js')
 
+
+
+
+
 //evnironment loading .env file into process.env ojbect
 require('dotenv').config();
 
 //SESSION extnernal modules
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
+const navLinks = require('./navLinks');
+const authRequired = function (req, res, next) {
+    if (req.session.currentUser) {
+      return next();
+    }
+  
+    return res.redirect("/login");
+  };
 
 //CONTROLLER IMPORTS
 const postController = require('./controllers/post_controller')
@@ -22,7 +34,7 @@ app.set('view engine','ejs')
 // Middleware
 app.use(express.static(__dirname + '/public'));
 app.use(methodOverride('_method'));
-
+// app.use(navLinks);
 
 /* SECTION App Config */
 app.use(
@@ -39,6 +51,11 @@ app.use(
         },
     })
 );
+
+app.use(function (req, res, next) {
+    res.locals.user = req.session.currentUser;
+    next();
+  });
 
 app.use('/blog', postController)
 app.use('/comments',commentController)
