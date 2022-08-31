@@ -88,6 +88,7 @@ router.post("/login", async function (req, res) {
         req.session.currentUser = {
             id: foundUser._id,
             username: foundUser.username,
+            avatar: foundUser.avatar
         };  
     
         return res.redirect("/blog");

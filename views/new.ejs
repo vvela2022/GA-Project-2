@@ -11,14 +11,13 @@
 <%- include('partials/nav.ejs') %>
 <div>
 <form action="/blog" method="POST">
-    
-    
     <div>
         
         <label for="user">User</label>
+        
         <input
-         type="text"
-          placeholder="My Username"
+         type="hidden"
+          value="<%= user.username %>"
           name="user"
           id="user"
           />
@@ -49,7 +48,7 @@
     
     <div>
 
-        <label for="location">Location</label>
+    <label for="location">Location</label>
       <input
         class="input"
         type="text"
@@ -59,6 +58,18 @@
           />
     </div>
             
+    <div>
+
+        <label for="avatar">Avatar</label>
+          <input
+            class="input"
+            type="hidden"
+            value="<%= user.avatar %>"
+            name="avatar"
+            id="avatar"
+              />
+        </div>
+
     <button class="button is-info">Create Post</button>
 </form>
 </div>

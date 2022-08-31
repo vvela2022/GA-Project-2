@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema(
         avatar: {
             type: String,
             default:
-                "https://welovedoodles.com/wp-content/uploads/2021/01/Havanese-puppies-in-New-York-300x243.jpg",
+                "https://i.imgur.com/gJZu9kY.jpg",
         },
     },
     {
