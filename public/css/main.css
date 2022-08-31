@@ -1,7 +1,8 @@
 
 
 body{
-    background-color: rgba(140, 150, 130, .5);
+    /* background-color: rgba(140, 150, 130, .5); */
+    background-color: white;
 }
 
 .logo{
@@ -23,14 +24,12 @@ nav{
 h2{
     text-align: center;
     font-family: 'Caveat', cursive;
-    margin-top: -5px;
+    /* margin-top: -5px; */
     font-size: 40px;
     max-height: 20px;
 }
 div {
     text-align: center;
-
-    
 }
 
 ul {
@@ -52,6 +51,8 @@ a {
 .imgPost {
     border-radius: 10px;
     box-shadow: 1px 2px;
+    text-align: center;
+    width: 500px;
     /* min-height: 540px;
     min-width: 540px;
     max-width: 540px;
@@ -64,10 +65,18 @@ h3 {
 }
 .navLinks {
     text-align: center;
-    margin-top: 60px;
+    /* margin-top: 60px; */
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
 }
+
+.login {
+    border: 1px solid red;
+    text-align: right;
+    font-size: 12px;
+    font-style: italic;
+}
+
 button {
     box-shadow: 1px 2px;
     border-radius: 5px;
@@ -78,8 +87,8 @@ button {
     color: whitesmoke;
     height: 30px;
     width: 500px;
-    margin-left: 375px;
-    margin-bottom: 0px;
+    /* margin-left: 375px;
+    margin-bottom: 0px; */
     
 }
 .commentDelete {
@@ -94,3 +103,26 @@ input {
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* potentially come back and remove margin*/
+.index-content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    width: 700px;
+}
+.content {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    width: 700px;
+}
+
+.broader-content{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}

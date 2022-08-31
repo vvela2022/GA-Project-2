@@ -16,14 +16,16 @@
 
     <%- include('partials/nav.ejs') %>
 
-    <div>
+    <div class="broader-content">
+    <div class="index-content">
         <%for(let i=0; i<posts.length;i++){%>
-            <ul>
-                <li><%=posts[i].user%></li>
-                <li><img src="<%=posts[i].avatar%>"></li>
-                <li><a href="/blog/<%=posts[i]._id%>"><img class="imgPost" src="<%=posts[i].image%>" style="width:500px"></a></li>
-            </ul>
+            <div class="content">
+                <h4><%=posts[i].user%></h4>
+                <h4><img src="<%=posts[i].avatar%>" style="width:50px"></h4>
+                <h4><a href="/blog/<%=posts[i]._id%>"><img class="imgPost" src="<%=posts[i].image%>" ></a></h4>
+            </div>
         <%} %>
+    </div>
     </div>
 </body>
 </html>
