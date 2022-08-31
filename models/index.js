@@ -1,5 +1,7 @@
-// const db = require('./Post.js')
+require("../config/db.connection");
+
 module.exports = {
     Post: require('./Post'),
-    Comment: require('./Comment')
+    Comment: require('./Comment'),
+    User: require('./User.js')
 }
