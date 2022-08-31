@@ -5,7 +5,9 @@ const postSchema = new mongoose.Schema ({
     user: {type: String, required: [true, 'Need a user']},
     body: String,
     image: {type: String, required:[true,'Need an image']},
-    location: String
+    location: String,
+    avatar: String
+
 },
 {timestamps: true})
 
