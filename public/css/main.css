@@ -13,11 +13,11 @@ nav{
     text-align: center;
     /* color:white; */
     background-color: rgba(245, 245, 245, .5);
-    border-radius: 10px;
-    border: 2px solid black;
+    border-radius: 15px;
+    border: 1px solid black;
     box-shadow: 1px 1px;
     height:150px;
-    width: 1100px;
+    max-width: 1240px;
     
 }
 h2{
@@ -39,16 +39,23 @@ ul {
 li {
 
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 a {
     text-decoration: none;
     color: black;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    
     
 }
 .imgPost {
     border-radius: 10px;
     box-shadow: 1px 2px;
+    /* min-height: 540px;
+    min-width: 540px;
+    max-width: 540px;
+    max-height: 540px; */
 }
 h3 {
     text-align: center;
@@ -58,17 +65,32 @@ h3 {
 .navLinks {
     text-align: center;
     margin-top: 60px;
-    /* margin-left: 30px; */
     font-size: 18px;
-    
+    font-family: 'Roboto', sans-serif;
 }
 button {
-    box-shadow: 2px 3px;
+    box-shadow: 1px 2px;
     border-radius: 5px;
-    
+    font-family: 'Roboto', sans-serif;
 }
 .user {
-    text-align: left;
-    margin-left: 230px;
+    /* background-color: black; */
+    color: whitesmoke;
+    height: 30px;
+    width: 500px;
+    margin-left: 375px;
+    margin-bottom: 0px;
     
 }
+.commentDelete {
+    display:contents;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+input {
+    box-shadow: 1px 2px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
