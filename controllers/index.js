@@ -1,5 +1,6 @@
 module.exports = {
     post: require('./post_controller.js'),
     comment: require('./comment_controller'),
-    auth: require('./auth_controller')
+    auth: require('./auth_controller'),
+    navLinks: require('./navLinks.js')
 };
