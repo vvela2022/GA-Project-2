@@ -1,4 +1,5 @@
 const express = require('express')
+const User = require('../models/User')
 const router = express.Router()
 
 // fetch data from models
@@ -12,6 +13,7 @@ router.use(express.urlencoded({extended: false}))
 
 
 
+
 //index route
 router.get("/", async (req,res,next)=> {
     try{
@@ -22,13 +24,14 @@ router.get("/", async (req,res,next)=> {
         req.error = error
         return next()
     }
+
 })
+
 
 //create(New) route
 router.get('/new', (req,res) => {
     res.render('new.ejs')
 })
-
 
 
 //Delete Route (delete function)
@@ -42,7 +45,6 @@ router.get('/:id/remove', async (req, res,) => {
         return next()
     }
     })
-
 
 
 //POST route
