@@ -1,43 +1,13 @@
 
-
-
 <div class="login">
     <% if (user) { %>
         <p class="navbar-item"><%= user.username %></p>
     <% } %>
     <% if (routes) { %> <% routes.forEach((route) => { %>
-<<<<<<< HEAD
     <a class="navbar-item" href="<%= route.href %>"> <%= route.title %> </a>
 <% }) %> <% } %>
 
-</div>
-<nav>
-    <div class="title">
-    <img class="logo" src="https://imgur.com/AAyVs7u.png">
-    <!-- <img class="logo" src="https://i.imgur.com/syhiuDb.png"> -->
-    
-    <h2>LandPost</h2>
-    
-    <div class="navLinks">
-    <a class="navA" href = "/blog">Home</a> |
-    <a class="navA" href = "/blog/new">+</a>
 
-    
-
-        <% if (user) { %>
-            <p class="navbar-item"><%= user.username %></p>
-        <% } %>
-    
-    </div>
-
-    <!-- routes -->
-    
-</div>
-
-</nav>
-=======
-      <a class="navbar-item" href="<%= route.href %>"> <%= route.title %> </a>
-  <% }) %> <% } %>
 
 </div>
 <div class="nav-container">
@@ -50,4 +20,4 @@
         </div>
     </nav>
 </div>
->>>>>>> eb50b56f42ce37c750e42c4a1156c04dc73b4bea
+
