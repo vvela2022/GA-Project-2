@@ -20,8 +20,9 @@
         <div>
             <p><%=post.body%></p>
         </div>
+        <%if (post.user === user.username) {%>
         <button><a href="/blog/<%=post.id%>/edit">Edit Post</a></button>
-        <button><a href="/blog/<%=post.id%>/remove">Delete Post</a></button>
+        <button><a href="/blog/<%=post.id%>/remove">Delete Post</a></button><% } %>
         <button><a href="/comments/<%=post.id%>/new">New Comment</a></button>
 
         
@@ -31,7 +32,9 @@
         <h3>Comments</h3>
         <ul>
           <%comments.forEach ( comment => { %>
-          <li><%= comment.body %> <form class="commentDelete" action="/comments/<%=comment._id%>?_method=DELETE" method="POST">
+          <li><%= comment.body %> 
+            
+            <form class="commentDelete" action="/comments/<%=comment._id%>?_method=DELETE" method="POST">
             <input class="button is-danger" type="submit" value="Delete Comment"/> </li>
           <% }) %>
         </ul>
