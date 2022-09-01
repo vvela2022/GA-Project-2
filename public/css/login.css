@@ -6,13 +6,11 @@ body{
     background-color: rgba(192, 200, 201, .7);
 }
 
-.logo{
+/* .logo{
 max-width: 70px;
 max-height: 70px;
 margin-top: 30px;
-/* border-radius: 50px;
-box-shadow: 1px 1px 0px 1px; */
-}
+} */
 
 nav{
     text-align: center;
