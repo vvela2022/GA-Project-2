@@ -27,6 +27,8 @@ LandPost is a cloud-based app that was built using express within a "Model, View
 
 - 
 
+<% if (typeof user.username === "string") {%> 
+
 ## Features
 #### Dynamic Display
 
