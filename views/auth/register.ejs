@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  <head>
+    <link href="/css/login.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@300&display=swap');
+        </style>
+  </head>
   <body class="has-navbar-fixed-top">
     <%- include('../partials/login_nav.ejs') %>
 
     <section class="hero is-fullheight-with-navbar is-link">
+      <div class="login-box">
       <div class="hero-body is-flex-direction-column">
-        <h1 class="title">Register</h1>
+        <h2>LandPost</h2>
+        <h3 class="title">Register</h3>
         <form action="/register" method="POST" class="box">
           <div class="field">
             <label class="label">Username</label>
@@ -55,9 +62,11 @@
           <div class="field">
             <div class="control">
               <button class="button is-link is-fullwidth">Submit</button>
+              <p class="login-link"><a href="/login">Login</a></p>
             </div>
           </div>
         </form>
+      </div>
       </div>
     </section>
     <main class="container is-max-widescreen"></main>
