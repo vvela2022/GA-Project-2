@@ -6,29 +6,25 @@ body{
     background-color: rgba(192, 200, 201, .7);
 }
 
-.logo{
+/* .logo{
 max-width: 70px;
 max-height: 70px;
 margin-top: 30px;
-/* border-radius: 50px;
-box-shadow: 1px 1px 0px 1px; */
-}
+} */
 
-nav{
+/* nav{
     text-align: center;
-    /* color:white; */
     background-color:whitesmoke;
     border-radius: 5px;
-    /* border: 1px solid grey; */
     box-shadow: 1px 1px black;
     height:150px;
     max-width: 1240px;
     
-}
+} */
 .login-box {
-    position: absolute;
-    top: 200px;
-    left: 370px;
+    /* position: absolute; */
+    /* top: 200px; */
+    /* left: 370px; */
     background-color:whitesmoke;
     box-shadow: 1px 5px black;
     border-radius: 5px;
@@ -36,6 +32,15 @@ nav{
     height: 500px;
     /* margin-left: 300px; */
 }
+
+.login-container{
+    margin-top: 60px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    
+}
+
 h2{
     text-align: center;
     font-family: 'Caveat', cursive;
