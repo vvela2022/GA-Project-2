@@ -14,47 +14,48 @@
 <body>
 
 <%- include('partials/nav.ejs') %>
+<div class="new-post-box">
 <h3>New Post</h3>
 <div>
 <form action="/blog" method="POST">
     <div>
         
-        <label for="user">User</label>
+        <label for="user"></label>
         
         <input
-         type="hidden"
+        type="hidden"
           value="<%= user.username %>"
           name="user"
           id="user"
           />
     </div>
             
-    <div>
+    <!-- <div>
     
         <label for="body">Body</label>
         <input 
-         type="text" 
+        type="text" 
           placeholder="Body" 
           name="body" 
           id="body" 
           />    
-     </div>
+    </div> -->
             
     <div>
         
-        <label for="image">Image</label>
-         <input 
-         type="text" 
-         placeholder="http://" 
-         name="image" 
-         id="image" 
+        <label for="image">Image URL:</label>
+        <input 
+        type="text" 
+        placeholder="http://" 
+        name="image" 
+        id="image" 
         />
         
     </div>
     
     <div>
 
-    <label for="location">Location</label>
+    <label for="location">Location:</label>
       <input
         class="input"
         type="text"
@@ -76,8 +77,20 @@
               />
         </div>
 
-    <button class="button is-info">Create Post</button>
+        <div>
+    
+          <label for="body">Text:</label>
+          <input 
+          type="text" 
+            placeholder="Text" 
+            name="body" 
+            id="body" 
+            />    
+      </div>
+
+    <button class="create-post">Create Post</button>
 </form>
+</div>
 </div>
 </body>
 </html>
