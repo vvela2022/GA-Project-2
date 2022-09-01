@@ -5,6 +5,8 @@ const router = express.Router()
 const db = require('../models')
 const Comment = require('../models/Comment.js')
 const Post = require('../models/Post.js')
+const User = require('../models/User.js'
+)
 
 
 
@@ -18,15 +20,17 @@ router.use(express.urlencoded({extended: false}))
 
 //new comment route
 router.get('/:id/new', async(req,res,next)=>{
+    
     try{
-        const post = await db.Post.findById(req.params.id)
+        const user = req.session.currentUser 
+        const post = await db.Post.findById(req.params.id)      
         const comments = await db.Comment.find({
             post: req.params.id
         });
         res.render('comments/new.ejs',{
             post: post,
             id: post.id,
-            comments: comments
+            comments: comments,
         })
     }catch (error){
 
