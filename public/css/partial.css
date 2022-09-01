@@ -17,7 +17,8 @@
 .title {
     display: flex;
     background-color: white;
-    justify-content: center;   
+    justify-content: center;
+    border: 1px solid lightgray;   
 }
 
 .logo{

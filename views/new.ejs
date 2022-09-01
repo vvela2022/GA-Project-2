@@ -11,62 +11,43 @@
         </style>
     <title>LandPost</title>
 </head>
-<body>
+<body class="main-color">
 
 <%- include('partials/nav.ejs') %>
-<div class="new-post-box">
-<h3>New Post</h3>
-<div>
-<form action="/blog" method="POST">
+<div class="postbox-container">
+  <div class="new-post-box">
+    <h3>New Post</h3>
     <div>
-        
-        <label for="user"></label>
-        
+      <form action="/blog" method="POST">    
+          <label for="user"></label>
+            <input
+              type="hidden"
+              value="<%= user.username %>"
+              name="user"
+              id="user"
+              /> 
+      </div>
+      <div>
+          <label for="image">Image URL:</label>
+            <input 
+            type="text" 
+            placeholder="http://" 
+            name="image" 
+            id="image" 
+            />  
+        </div>
+      <div>
+      <label for="location">Location:</label>
         <input
-        type="hidden"
-          value="<%= user.username %>"
-          name="user"
-          id="user"
-          />
-    </div>
+          class="input"
+          type="text"
+          placeholder="City,State"
+          name="location"
+          id="location"
+            />
+      </div>
             
-    <!-- <div>
-    
-        <label for="body">Body</label>
-        <input 
-        type="text" 
-          placeholder="Body" 
-          name="body" 
-          id="body" 
-          />    
-    </div> -->
-            
-    <div>
-        
-        <label for="image">Image URL:</label>
-        <input 
-        type="text" 
-        placeholder="http://" 
-        name="image" 
-        id="image" 
-        />
-        
-    </div>
-    
-    <div>
-
-    <label for="location">Location:</label>
-      <input
-        class="input"
-        type="text"
-        placeholder="City,State"
-        name="location"
-        id="location"
-          />
-    </div>
-            
-    <div>
-
+      <div>
         <label for="avatar"></label>
           <input
             class="input"
@@ -86,11 +67,22 @@
             name="body" 
             id="body" 
             />    
-      </div>
-
+          </div>
     <button class="create-post">Create Post</button>
-</form>
+  </form>
 </div>
 </div>
 </body>
 </html>
+
+    <!-- <div>
+    
+        <label for="body">Body</label>
+        <input 
+        type="text" 
+          placeholder="Body" 
+          name="body" 
+          id="body" 
+          />    
+    </div> -->
+            

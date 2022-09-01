@@ -8,47 +8,9 @@ body{
 
 }
 
-/* .logo{
-max-width: 100px;
-} */
-
-/* styling for header here - take into individual */
-/* nav{
-    text-align: center;
-    background-color: rgba(245, 245, 245, .5);
-    border-radius: 15px;
-    border: 1px solid black;
-    box-shadow: 1px 1px;
-    height:150px;
-    min-width: 900px;
-    
-} */
-/* .nav-container{
-    display: flex;
-    justify-content: center;
-    height: 150px;
-
-  
-} */
-/* .nav-bar{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 2000px;
-} */
-
-/* .navbar-item{
-    font-size: 14px;
-    font-weight: bold;
-    
-} */
-
-/* .title {
-    display: flex;
-    background-color: white;
-    justify-content: center;
-    
-} */
+.main-color{
+    background-color: whitesmoke
+}
 
 h2{
     text-align: center;
@@ -175,17 +137,7 @@ input {
     justify-content: center;
     /* border: 1px solid red; */
 }
-.new-post-box {
-    position: absolute;
-    top: 200px;
-    left: 370px;
-    background-color:whitesmoke;
-    box-shadow: 1px 5px black;
-    border-radius: 5px;
-    width: 400px;
-    height: 300px;
-    /* margin-left: 300px; */
-}
+
 label {
     font-size:'Roboto', sans-serif;
     position: relative;
@@ -206,4 +158,18 @@ text-align: center;
 }
 h4 {
     font-family: 'Roboto', sans-serif;
+}
+
+/* New Post Styling */
+.postbox-container {
+    display: flex;
+    justify-content: center;
+}
+
+.new-post-box {
+    background-color: white;
+    box-shadow: 1px 5px black;
+    border-radius: 5px;
+    width: 400px;
+    height: 300px;
 }
