@@ -12,7 +12,7 @@ body{
 max-width: 100px;
 }
 
-
+/* styling for header here - take into individual */
 /* nav{
     text-align: center;
     background-color: rgba(245, 245, 245, .5);
@@ -36,8 +36,6 @@ max-width: 100px;
     gap: 20px;
     /* border: 2px solid black; */
     width: 2000px;
-  
-
 }
 
 .title {
@@ -86,8 +84,8 @@ a {
     
 }
 .imgPost {
-    /* border-radius: 10px;
-    box-shadow: 1px 2px; */
+    /* border-radius: 10px; */
+    /* box-shadow: 1px 2px; */
     text-align: center;
     width: 700px;
     /* min-height: 540px;
@@ -95,6 +93,26 @@ a {
     max-width: 540px;
     max-height: 540px; */
 }
+
+.avatar-handle {
+    display: flex;
+    /* border: 2px solid purple; */
+    gap: 15px;
+    align-items: center;
+}
+
+/* .user-info {
+    border: 2px solid gray;
+    border-radius: 10px;
+} */
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
 h3 {
     text-align: center;
     font-family: 'Caveat', cursive;
@@ -141,7 +159,7 @@ input {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    /* border: 1px solid black; */
+    /* border: 1px solid lightgray; */
     align-items: center;
     gap: 10px;
     border-radius: 5px;
@@ -149,8 +167,8 @@ input {
     /* background-color: white; */
 }
 .content {
-    /* border: 1px solid black; */
-    border-radius: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
     width: 700px;
     background-color: white;
 }
