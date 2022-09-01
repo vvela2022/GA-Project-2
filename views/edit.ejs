@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link href="/css/partial.css" rel="stylesheet" type="text/css">
     <link href="/css/main.css" rel="stylesheet" type="text/css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@300&display=swap');
@@ -20,11 +22,10 @@
     
     
     <div>
-        
-        <label for="user">User:</label>
+        <label for="user"></label>
+
         <input
-        type="text"
-        placeholder="My Username"
+        type="hidden"
         name="user"
         id="user"
         value = "<%=editedPost.user%>"
