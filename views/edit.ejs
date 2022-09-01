@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@300&display=swap');
+        </style>
     <title>LandPost</title>
 </head>
 <body>
-<h2>Edit Post</h2>
+
 <%- include('partials/nav.ejs') %>
+<div class="new-post-box">
+    <h3>Edit Post</h3>
 <div>
 <form action="/blog/<%=editedPost.id%>?_method=PUT" method="POST">
     
     
     <div>
         
-        <label for="user">User</label>
+        <label for="user">User:</label>
         <input
         type="text"
         placeholder="My Username"
@@ -25,21 +31,11 @@
         />
     </div>
             
-    <div>
     
-        <label for="body">Body</label>
-        <input 
-        type="text" 
-        placeholder="Body" 
-        name="body" 
-        d="body" 
-        value = "<%=editedPost.body%>"
-        />    
-    </div>
             
     <div>
         
-        <label for="image">Image</label>
+        <label for="image">Image URL:</label>
         <input 
         type="text" 
         placeholder="http://" 
@@ -52,7 +48,7 @@
     
     <div>
 
-        <label for="location">Location</label>
+        <label for="location">Location:</label>
     <input
         class="input"
         type="text"
@@ -63,8 +59,21 @@
         />
     </div>
             
-    <button class="button is-info">Submit Edit</button>
+    <div>
+    
+        <label for="body">Text:</label>
+        <input 
+        type="text" 
+        placeholder="text" 
+        name="body" 
+        d="body" 
+        value = "<%=editedPost.body%>"
+        />    
+    </div>
+
+    <button class="create-post">Submit Edit</button>
 </form>
+</div>
 </div>
 </body>
 </html>

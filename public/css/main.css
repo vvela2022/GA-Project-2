@@ -55,8 +55,9 @@ max-width: 100px;
 h2{
     text-align: center;
     font-family: 'Caveat', cursive;
+    /* font-family: 'Cookie', cursive; */
     /* margin-top: -5px; */
-    font-size: 40px;
+    font-size: 50px;
     max-height: 20px;
 }
 div {
@@ -205,4 +206,7 @@ label {
 }
 .delete-btn {
 text-align: center;
+}
+h4 {
+    font-family: 'Roboto', sans-serif;
 }
