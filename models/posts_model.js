@@ -3,7 +3,8 @@ const db = require('./Post.js')
 
 // const Post = require("./Post.js")
 
-const seedData = [
+const seedData = 
+[
     {
         user: 'David Robles',
         body: 'Had a great time at the beach',
@@ -131,20 +132,6 @@ const seedData = [
 ]
 
 
-//User Data
-
-// email: {
-//     type: String,
-//     required: [true, "Please Provide An Email Address."],
-//     unique: true,
-// },
-// password: {
-//     type: String,
-//     required: [true, "Please Provide A Password"],
-// },
-// username: { type: String, required: true, unique: true },
-// avatar: {
-
 
 const userData = [
     {
@@ -184,7 +171,7 @@ const userData = [
     avatar: 'https://i.imgur.com/jKKgbfe.png?2',
     },
     {
-    email: 'nature@gmail.com',
+    email: 'nature93@gmail.com',
     password: 'nature',
     username: 'NatureisMyLife',
     avatar: 'https://i.imgur.com/2TlPHnT.png?1',
@@ -257,3 +244,5 @@ const userData = [
     }, 
 
 ]
+
+module.exports = userData

@@ -12,11 +12,10 @@
       </style>
     <title>LandPost</title>
 </head>
-<body>
+<body class="main-color">
   <%- include('partials/nav.ejs') %>
     <div>
-        <h3 class="user><%=post.user%></h3>
-        <img src="<%=post.avatar%>">
+        <img src="<%post.avatar%>">
         <img class="imgPost" src="<%=post.image%>" style="width: 500px">
         <div>
             <p><%=post.body%></p>

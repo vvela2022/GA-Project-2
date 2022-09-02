@@ -2,53 +2,17 @@
 
 body{
     /* background-color: rgba(140, 150, 130, .5); */
-    background-color: rgba(192, 200, 201, .7);
+    /* background-color: rgba(192, 200, 201, .7); */
     /* background-color: rgb(38, 38, 129); */
+    background-color: rgba(140, 150, 130, .5);
     align-items: center;
 
 }
 
-/* .logo{
-max-width: 100px;
-} */
-
-/* styling for header here - take into individual */
-/* nav{
-    text-align: center;
-    background-color: rgba(245, 245, 245, .5);
-    border-radius: 15px;
-    border: 1px solid black;
-    box-shadow: 1px 1px;
-    height:150px;
-    min-width: 900px;
-    
-} */
-/* .nav-container{
-    display: flex;
-    justify-content: center;
-    height: 150px;
-
-  
-} */
-/* .nav-bar{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 2000px;
-} */
-
-/* .navbar-item{
-    font-size: 14px;
-    font-weight: bold;
-    
-} */
-
-/* .title {
-    display: flex;
-    background-color: white;
-    justify-content: center;
-    
-} */
+.main-color{
+    /* background-color: whitesmoke */
+    background-color: rgba(140, 150, 130, .5)
+}
 
 h2{
     text-align: center;
@@ -144,6 +108,7 @@ button {
 p {
     font-family: 'Roboto', sans-serif;
 }
+
 input {
     box-shadow: 1px 2px;
     border-radius: 5px;
@@ -167,7 +132,7 @@ input {
     border: 1px solid lightgray;
     border-radius: 5px;
     width: 700px;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .broader-content{
@@ -175,23 +140,7 @@ input {
     justify-content: center;
     /* border: 1px solid red; */
 }
-.new-post-box {
-    position: absolute;
-    top: 200px;
-    left: 370px;
-    background-color:whitesmoke;
-    box-shadow: 1px 5px black;
-    border-radius: 5px;
-    width: 400px;
-    height: 300px;
-    /* margin-left: 300px; */
-}
-label {
-    font-size:'Roboto', sans-serif;
-    position: relative;
-    right: 30px;
-    font-size: 14px;
-}
+
 .create-post {
     position: relative;
     top: 50px;
@@ -199,11 +148,40 @@ label {
     height: 30px;
     box-shadow: 1px 2px;
     border-radius: 5px;
-    background-color: rgba(192, 200, 201, .7);;
+    background-color: rgba(192, 200, 201, .7);
 }
 .delete-btn {
 text-align: center;
 }
+
 h4 {
     font-family: 'Roboto', sans-serif;
+}
+
+/* New Post Styling */
+.postbox-container {
+    display: flex;
+    justify-content: center;
+}
+
+.new-post-box {
+    background-color: whitesmoke;
+    box-shadow: 1px 5px black;
+    border-radius: 5px;
+    width: 400px;
+    height: 300px;
+}
+
+.input-style{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-input {
+    margin-right: 40px;
+}
+
+.post-label {
+    margin-left: 40px;
 }

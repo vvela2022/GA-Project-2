@@ -2,7 +2,7 @@
 const express = require('express')
 const methodOverride = require('method-override')
 require('./config/db.connection.js')
-
+const seedData = require('./models/posts_model')
 
 //evnironment loading .env file into process.env ojbect
 require('dotenv').config();
@@ -11,6 +11,8 @@ require('dotenv').config();
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const navLinks = require('./controllers/navLinks');
+
+
 const authRequired = function (req, res, next) {
     if (req.session.currentUser) {
       return next();
@@ -22,7 +24,9 @@ const authRequired = function (req, res, next) {
 //CONTROLLER IMPORTS
 const postController = require('./controllers/post_controller')
 const commentController = require('./controllers/comment_controller')
-const authController = require ('./controllers/auth_controller.js')
+const authController = require ('./controllers/auth_controller.js');
+const db = require('./models');
+const User = require('./models/User')
 //app configuration
 const app = express()
 const PORT = process.env.PORT || 4000
@@ -67,8 +71,18 @@ app.use('/blog', postController)
 app.use('/comments',commentController)
 // Here we will add the routes for login and register 
 
+async function reloadData() {
+	try {
+		let deleted = await db.User.deleteMany({});
+		console.log(deleted)
+		let reloading = await db.User.insertMany(seedData);
+		console.log(reloading)
+	} catch (err) {
+		console.log(err);
+	}
+}
 
-
+// reloadData()
 //SERVER
 app.listen(PORT, () => console.log('starting server at port:', PORT))
 

@@ -16,8 +16,11 @@
 
 .title {
     display: flex;
-    background-color: white;
-    justify-content: center;   
+    background-color: whitesmoke;
+    justify-content: center;
+    border: 1px solid whitesmoke; 
+    border-radius: 5px;
+    box-shadow: 2px 1px 0px 1px
 }
 
 .logo{
