@@ -12,15 +12,26 @@ router.use(express.json())
 router.use(express.urlencoded({extended: false}))
 
 
+// router.get('/',async(req,res,next)=> {
+//     try{
+//     }
+//     }catch(error){
+//         req.error = error
+//         return next()
+//     }
+// })
 
 
 //index route
 router.get("/", async (req,res,next)=> {
     try{
+        
+        
         const posts = await db.Post.find()
-        const context = {posts}
+        const context = {posts}  
         res.render('index.ejs', context)
     }catch (error){
+       
         req.error = error
         return next()
     }

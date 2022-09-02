@@ -27,7 +27,11 @@
                     </h4>
                         <h4 class="user-info" ><%=posts[i].user%></h4>
                 </div>
-                <h4> <a href="/blog/<%=posts[i]._id%>"><img class="imgPost" src="<%=posts[i].image%>" ></a></h4>
+                <%if (undefined === user) {%>
+                <h4><a href="/login%>"><img class="imgPost" src="<%=posts[i].image%>" ></a></h4>
+                <%}else{%>
+                <h4><a href="/blog/<%=posts[i]._id%>"><img class="imgPost" src="<%=posts[i].image%>" ></a></h4>
+                <%}%>
             </div>
         <%} %>
     </div>
