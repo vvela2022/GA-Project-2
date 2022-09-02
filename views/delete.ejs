@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/css/partial.css" rel="stylesheet" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Roboto:wght@300&display=swap');
+        </style>
+
+    
+
     <title>LandPost</title>
 </head>
 <body>
     <%- include('partials/nav.ejs') %>
-    <h1>Are you sure you want to delete?</h1>
-    <button><form action="/blog/<%=post.id%>?_method=DELETE" method="POST">
-        <input class="button is-danger" type="submit" value="Delete Post"/> </button>
+    <h3>Are you sure you want to delete?</h3>
+    <form class="delete-btn" action="/blog/<%=post.id%>?_method=DELETE" method="POST">
+        <input class="button is-danger" type="submit" value="Delete Post"/>
 </body>
 </html>

@@ -1,4 +1,23 @@
-<nav>
-    <a href = "/blog">Home</a> |
-    <a href = "/blog/new">+</a>
-</nav>
+
+<div class="login">
+    <% if (user) { %>
+        <p class="navbar-item"><%= user.username %></p>
+    <% } %>
+    <% if (routes) { %> <% routes.forEach((route) => { %>
+    <a class="navbar-item" href="<%= route.href %>"> <%= route.title %> </a>
+<% }) %> <% } %>
+
+
+
+</div>
+<div class="nav-container">
+    <nav class="nav-bar">
+        <div class="title">
+            <img class="logo" src="https://imgur.com/AAyVs7u.png">
+            <a href="/blog" class="home-button">
+                <h2>LandPost</h2>
+            </a>
+        </div>
+    </nav>
+</div>
+

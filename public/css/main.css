@@ -1,0 +1,209 @@
+
+
+body{
+    /* background-color: rgba(140, 150, 130, .5); */
+    background-color: rgba(192, 200, 201, .7);
+    /* background-color: rgb(38, 38, 129); */
+    align-items: center;
+
+}
+
+/* .logo{
+max-width: 100px;
+} */
+
+/* styling for header here - take into individual */
+/* nav{
+    text-align: center;
+    background-color: rgba(245, 245, 245, .5);
+    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: 1px 1px;
+    height:150px;
+    min-width: 900px;
+    
+} */
+/* .nav-container{
+    display: flex;
+    justify-content: center;
+    height: 150px;
+
+  
+} */
+/* .nav-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 2000px;
+} */
+
+/* .navbar-item{
+    font-size: 14px;
+    font-weight: bold;
+    
+} */
+
+/* .title {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    
+} */
+
+h2{
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    /* font-family: 'Cookie', cursive; */
+    /* margin-top: -5px; */
+    font-size: 50px;
+    max-height: 20px;
+}
+div {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+li {
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    
+    
+}
+.imgPost {
+    /* border-radius: 10px; */
+    /* box-shadow: 1px 2px; */
+    text-align: center;
+    width: 700px;
+    /* min-height: 540px;
+    min-width: 540px;
+    max-width: 540px;
+    max-height: 540px; */
+}
+
+.avatar-handle {
+    display: flex;
+    /* border: 2px solid purple; */
+    gap: 15px;
+    align-items: center;
+}
+
+/* .user-info {
+    border: 2px solid gray;
+    border-radius: 10px;
+} */
+
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+h3 {
+    text-align: center;
+    font-family:'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+
+/* .login {
+    display: flex;
+    font-size: 12px;
+    font-style: italic;
+    align-items: center;
+    justify-content: right;
+    gap: 15px;
+} */
+
+button {
+    box-shadow: 1px 2px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+.user {
+    /* background-color: black; */
+    color: whitesmoke;
+    height: 30px;
+    width: 500px;
+    /* margin-left: 375px;
+    margin-bottom: 0px; */
+    
+}
+.commentDelete {
+    display:contents;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+input {
+    box-shadow: 1px 2px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* potentially come back and remove margin*/
+.index-content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid lightgray; */
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    width: 700px;
+    /* background-color: white; */
+}
+.content {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 700px;
+    background-color: white;
+}
+
+.broader-content{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+.new-post-box {
+    position: absolute;
+    top: 200px;
+    left: 370px;
+    background-color:whitesmoke;
+    box-shadow: 1px 5px black;
+    border-radius: 5px;
+    width: 400px;
+    height: 300px;
+    /* margin-left: 300px; */
+}
+label {
+    font-size:'Roboto', sans-serif;
+    position: relative;
+    right: 30px;
+    font-size: 14px;
+}
+.create-post {
+    position: relative;
+    top: 50px;
+    width: 200px;
+    height: 30px;
+    box-shadow: 1px 2px;
+    border-radius: 5px;
+    background-color: rgba(192, 200, 201, .7);;
+}
+.delete-btn {
+text-align: center;
+}
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
