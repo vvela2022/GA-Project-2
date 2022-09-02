@@ -25,8 +25,6 @@ router.use(express.urlencoded({extended: false}))
 //index route
 router.get("/", async (req,res,next)=> {
     try{
-        
-        
         const posts = await db.Post.find()
         const context = {posts}  
         res.render('index.ejs', context)
