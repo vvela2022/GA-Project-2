@@ -1,26 +1,68 @@
 
 
 body{
-    /* background-color: rgba(140, 150, 130, .5); */
-    /* background-color: rgba(158, 162, 142, .7); */
     background-color: rgba(192, 200, 201, .7);
 }
 
-/* .logo{
-max-width: 70px;
-max-height: 70px;
-margin-top: 30px;
-} */
+/* styling for login header */
+.login {
+    /* border: 1px solid red; */
+    display: flex;
+    font-size: 12px;
+    font-style: italic;
+    align-items: center;
+    justify-content: right;
+    gap: 15px;
+}
 
-/* nav{
-    text-align: center;
-    background-color:whitesmoke;
-    border-radius: 5px;
-    box-shadow: 1px 1px black;
-    height:150px;
-    max-width: 1240px;
+.navbar-item{
+    font-size: 14px;
+    font-weight: bold;
     
-} */
+}
+
+.login-nav-header {
+    display: flex;
+    justify-content: center;
+
+}
+
+.title {
+    display: flex;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: flex-end;
+    border: 1px solid whitesmoke; 
+    border-radius: 5px;
+    box-shadow: 2px 1px 0px 1px;
+    width: 700px;
+    margin-top: 20px;
+    
+}
+
+.logo{
+    max-width: 100px;
+    height: 75px;
+    margin-top: 30px;
+    opacity: .9;
+}
+
+/* nav.ejs partial styling */
+.nav-container{
+    display: flex;
+    /* border: 1px solid red; */
+    justify-content: center;
+    height: 150px;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 2000px;
+    /* border: 2px solid black; */
+}
+
 .login-box {
     /* position: absolute; */
     /* top: 200px; */
@@ -42,16 +84,21 @@ margin-top: 30px;
 }
 
 h2{
-    text-align: center;
     /* font-family: 'Caveat', cursive; */
     
     /* margin-top: -5px; */
-    font-size: 30px;
     margin-top: -1px;
+    text-align: center;
+    /* font-family: 'Caveat', cursive; */
+    font-family:'Caveat', cursive;
+    /* margin-top: -5px; */
+    font-size: 50px;
+    max-height: 20px;
     /* max-height: 20px; */
     /* position: relative;
     top: 80px; */
 }
+
 div {
     text-align: center;
 }
