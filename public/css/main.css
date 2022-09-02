@@ -106,6 +106,7 @@ button {
 p {
     font-family: 'Roboto', sans-serif;
 }
+
 input {
     box-shadow: 1px 2px;
     border-radius: 5px;
@@ -138,12 +139,6 @@ input {
     /* border: 1px solid red; */
 }
 
-label {
-    font-size:'Roboto', sans-serif;
-    position: relative;
-    right: 30px;
-    font-size: 14px;
-}
 .create-post {
     position: relative;
     top: 50px;
@@ -156,6 +151,7 @@ label {
 .delete-btn {
 text-align: center;
 }
+
 h4 {
     font-family: 'Roboto', sans-serif;
 }
@@ -172,4 +168,18 @@ h4 {
     border-radius: 5px;
     width: 400px;
     height: 300px;
+}
+
+.input-style{
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-input {
+    margin-right: 40px;
+}
+
+.post-label {
+    margin-left: 40px;
 }

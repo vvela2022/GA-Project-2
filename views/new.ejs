@@ -17,9 +17,9 @@
 <div class="postbox-container">
   <div class="new-post-box">
     <h3>New Post</h3>
-    <div>
+    <div class="input-style">
       <form action="/blog" method="POST">    
-          <label for="user"></label>
+          <label for="user" class="post-label"></label>
             <input
               type="hidden"
               value="<%= user.username %>"
@@ -27,19 +27,20 @@
               id="user"
               /> 
       </div>
-      <div>
-          <label for="image">Image URL:</label>
-            <input 
+      <div class="input-style">
+          <label for="image" class="post-label">Image URL:</label>
+            <input
+            class="post-input"
             type="text" 
             placeholder="http://" 
             name="image" 
             id="image" 
             />  
         </div>
-      <div>
-      <label for="location">Location:</label>
+      <div class="input-style">
+      <label for="location" class="post-label">Location:</label>
         <input
-          class="input"
+          class="post-input"
           type="text"
           placeholder="City,State"
           name="location"
@@ -47,10 +48,9 @@
             />
       </div>
             
-      <div>
-        <label for="avatar"></label>
+      <div class="input-style">
+        <label for="avatar" class="post-label"></label>
           <input
-            class="input"
             type="hidden"
             value="<%= user.avatar %>"
             name="avatar"
@@ -58,10 +58,11 @@
               />
         </div>
 
-        <div>
+        <div class="input-style">
     
-          <label for="body">Text:</label>
-          <input 
+          <label for="body" class="post-label">Text:</label>
+          <input
+          class="post-input" 
           type="text" 
             placeholder="Text" 
             name="body" 
