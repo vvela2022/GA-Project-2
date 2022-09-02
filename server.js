@@ -52,7 +52,7 @@ app.use(
 );
 
 app.get('/', (req,res)=>{
-  res.redirect('/login')
+  res.redirect('/blog')
 })
 
 
