@@ -25,7 +25,7 @@ const commentController = require('./controllers/comment_controller')
 const authController = require ('./controllers/auth_controller.js')
 //app configuration
 const app = express()
-const PORT = 4000
+const PORT = process.env.PORT || 4000
 
 
 app.set('view engine','ejs')
