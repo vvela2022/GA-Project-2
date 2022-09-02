@@ -51,6 +51,11 @@ app.use(
     })
 );
 
+app.get('/', (req,res)=>{
+  res.redirect('/blog')
+})
+
+
 app.use(navLinks);
 app.use(function (req, res, next) {
     res.locals.user = req.session.currentUser;
@@ -61,7 +66,6 @@ app.use("/", authController);
 app.use('/blog', postController)
 app.use('/comments',commentController)
 // Here we will add the routes for login and register 
-
 
 
 
