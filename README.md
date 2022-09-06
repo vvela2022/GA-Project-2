@@ -70,8 +70,6 @@ Upon arrival on the application's home page, the user is presented with a login:
 **Email**: 'String' 
 **Password**: 'String'
 
-**Email** | **Password**———— | ————-'String'| 'String'| 
-
 Both the email and username must be entered correctly. If login credentials are incorrect, user is denied entry. At current state, user must go back 
 to login page to either try again or register with the following credentials:
 
