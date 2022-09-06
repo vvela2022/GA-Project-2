@@ -55,13 +55,13 @@ The main index page displays the current user's name. Each post listed on the ma
 
 ## Code Examples
 #### Hidden Inputs on Forms
-![Hidden Inputs on Forms](https://i.imgur.com/FUGlem5.png"Hidden Inputs on Forms")
+![Hidden Inputs on Forms](https://i.imgur.com/FUGlem5.png "Hidden Inputs on Forms")
 
 #### Redirecting Based on Session
-![Redirecting Based on Session](https://i.imgur.com/B2ioIlc.png"Redirecting Based on Session")
+![Redirecting Based on Session](https://i.imgur.com/B2ioIlc.png "Redirecting Based on Session")
 
 #### Conditional Code for Users
-![Conditional Code for Users](https://i.imgur.com/GbsS9mG.png"Conditional Code for Users")
+![Conditional Code for Users](https://i.imgur.com/GbsS9mG.png "Conditional Code for Users")
 
 ## How to Use?
 #### Login/Register
