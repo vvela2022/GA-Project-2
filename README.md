@@ -4,29 +4,41 @@ Welcome to **LandPost**!
 ## About
 LandPost is an environmentally focused blog which allows users to upload posts in the form of photos and bodies of text. 
 
-- 
 
 ## Motivation
 LandPost is centered around a vision for an app that is focused completely on nature and our experiences within it. There is not a 
 like button, there is only the ability to comment on other's photos. Designed minimally, LandPost reflects a more relaxed and fun
 focused social media. This app is free of advertisements and video.
 
-- 
-
-## Build Status
-
-- 
 
 ## Screenshots
 
+#### Login Page/Home Route
+![Login Page](https://i.imgur.com/QEV6K42.png "Login Page")
+
+#### Register Page
+![Register Page](https://i.imgur.com/TMWDw8h.png "Register Page")
+
+#### Main Index Page
+![Main Index Page](https://i.imgur.com/xazY3l0.jpg "Main Index Page")
+
+#### New Post
+![New Post](https://i.imgur.com/VSFah7s.png "New Post")
+
+#### Edit Post
+![Edit Post](https://i.imgur.com/pBg9XZN.png "Edit Post")
+
+#### Delete Post
+![Delete Post](https://i.imgur.com/WnZq8Yf.png "Delete Your Post")
+
+#### Show Post
+![Show Post](https://i.imgur.com/yuloH2R.png "Show Your Post")
+
+#### Show Friend's Post
+![Show Friend Post](https://i.imgur.com/kaR9cx0.png "Show Friend's Post")
 
 ## Tech/Framework used
 LandPost is a cloud-based app that was built using express within a "Model, View, Controller" framework. Data is stored in a remote Mongo cloud database. All of the functionality is written in javscript. The aesthetics and layout of the app are handled by CSS. 
-
-** Styling ** 
-
-- 
-
 
 
 ## Features
@@ -40,12 +52,16 @@ The same functionality applies to comments as well. When a comment is entered, t
 
 The main index page displays the current user's name. Each post listed on the main page displays it's authors name and appropriate avatar image. 
 
-#### Other Features
-
-- 
 
 ## Code Examples
+#### Hidden Inputs on Forms
+![Hidden Inputs on Forms](https://i.imgur.com/FUGlem5.png"Hidden Inputs on Forms")
 
+#### Redirecting Based on Session
+![Redirecting Based on Session](https://i.imgur.com/B2ioIlc.png"Redirecting Based on Session")
+
+#### Conditional Code for Users
+![Conditional Code for Users](https://i.imgur.com/GbsS9mG.png"Conditional Code for Users")
 
 ## How to Use?
 #### Login/Register
